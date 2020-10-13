@@ -8,3 +8,6 @@ ggplot(dino) +geom_point(aes(x=x,y=y))
 
 star <- subset(datasaurus,dataset =="star")
 ggplot(star) +geom_point(aes(x=x,y=y))
+## All togather now...
+ggplot(datasaurus) +geom_point(aes(x=x,y=y)) +
+  geom_smooth(aes(x=x,y=y),method="loess",span=0.25)
